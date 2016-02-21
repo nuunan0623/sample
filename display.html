@@ -1,0 +1,81 @@
+<html>
+    <head>
+        
+        
+    <title>enGeno</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+        
+          <meta charset="UTF-8">
+  <script src="go.js"></script>
+  <link href="../assets/css/goSamples.css" rel="stylesheet" type="text/css" />  <!-- you don't need to use this -->
+  <script src="goSamples.js"></script>  <!-- this is only for the GoJS Samples framework -->
+      <script src="enGeno.js"></script>
+  
+
+    </head>
+        <body>
+            <div id="wrapper">
+
+        <header>
+            <div id="header">
+                <div id="logo"></div>
+            </div>    
+                    
+            <div id="processBar2"></div>
+        </header>
+        
+                <br>
+                <input id="file" type='file' accept='text/plain' onchange='openFile(event)'><br>
+        <div id="myDiagram"  ></div>
+        <section id="barForSymbol">
+            
+            <h9>Genogram Symbol</h9>
+            <br>
+            <br>
+            
+            <nav id="selectSymbol">
+                
+                    <ul>
+                    
+                    <div class="btn-group-vertical">
+                <button type="button" class="btn btn-info" width="849px" >Gender</button>
+                <button type="button" class="btn btn-info">Relation</button>
+                <button type="button" class="btn btn-info">Abuse</button>
+                <button type="button" class="btn btn-info">Addiction</button>
+                <button type="button" class="btn btn-info">Disease</button>
+                    </div>
+              
+          
+                </ul>
+                </nav>
+       </section><!--barForSymbol-->   
+        
+                <div class="btn-group btn-group-justified">
+                      <a href="#" class="btn btn-warning">ย้อนกลับ</a>
+                      <a href="#" class="btn btn-warning">บันทึก</a>
+                     
+                </div>
+                
+                <br><br>
+        
+            </div><!--wrapper-->
+        </body>
+    
+ 
+    
+</html>
+
+<script>
+   function displayNode(node){
+       var bar = document.getElementById("barForSymbol");
+       bar.innerHTML += node.data.n;
+   }
+
+
+</script>
